@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { VarietyController } from './variety.controller';
-import { VarietyService } from './variety.service';
-
+import { PrologService } from '../prolog/prolog.service';
 @Module({
   controllers: [VarietyController],
-  providers: [VarietyService]
+  providers: [PrologService]
 })
-export class VarietyModule {}
+export class VarietyModule {
+
+}
