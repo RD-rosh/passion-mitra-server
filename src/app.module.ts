@@ -5,6 +5,7 @@ import { AdvicesModule } from './advices/advices.module';
 import { FertilizerModule } from './fertilizer/fertilizer.module';
 import { HarvestModule } from './harvest/harvest.module';
 import { NutritionModule } from './nutrition/nutrition.module';
+import { VarietyModule } from './variety/variety.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { NutritionModule } from './nutrition/nutrition.module';
     FertilizerModule,
     HarvestModule,
     NutritionModule,
+    VarietyModule,
   ],
 })
 export class AppModule { }

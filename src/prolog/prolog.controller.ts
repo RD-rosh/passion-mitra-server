@@ -1,14 +1,16 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Post } from '@nestjs/common';
 import { PrologService } from './prolog.service';
 
 @Controller('prolog')
 export class PrologController {
     constructor(private readonly prologService: PrologService) { }
 
-    @Get('diagnose')
-    async diagnose(@Query('symptoms') symptoms: string) {
-        const symptomList = symptoms.split(',');
-        const query = `assert(observed_symptoms([${symptomList.join(',')}])), findall(Disease-Certainty, diagnose_condition(Disease, Certainty), L), write(L).`;
+    @Post('reset')
+    async reset() {
+        const query = `
+      retractall(_),
+      write('reset_done').
+    `;
         const result = await this.prologService.queryProlog(query);
         return { result };
     }

@@ -62,3 +62,50 @@ http://localhost:3000/nutrition
 "[[water,89,percent],[energy,37,kcal],[protein,1.2,percent],[fat,0.2,percent],[carbohydrate,7.7,percent],[fiber,10,mg],[calcium,30,mg],[iron,0.7,mg],[vitamin_a,1968,IU],[vitamin_b,10,mg],[vitamin_c,20,mg],[potassium,13,mg]]"
 ]
 }
+
+recommended variety
+POST http://localhost:3000/variety/recommend
+
+{
+"zone": "intermediate_zone",
+"altitude": 700,
+"diseaseProne": false
+}
+
+result
+{"result":["[[yellow_passion_fruit,0.7]]"]}
+
+recomended fertilizer
+
+POST http://localhost:3000/fertilizer/recommend
+
+{
+"zone": "wet_zone",
+"stage": "planting"
+}
+
+result
+{"result":["[[urea,500],[triple_super_phosphate,5000],[muriate_of_potash,10000],[urea,500],[triple_super_phosphate,5000],[muriate_of_potash,10000]]"]}
+
+http://localhost:3000/harvest/check
+{
+"daysSinceFlowering": 30,
+"variety": "yellow_passion_fruit"
+}
+
+{
+"result": [
+"ready"
+]
+}
+
+{
+"variety": "purple_passion_fruit",
+"daysSinceFlowering": 60
+}
+
+{
+"result": [
+"not_ready"
+]
+}
