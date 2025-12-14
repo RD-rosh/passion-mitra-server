@@ -1,14 +1,19 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { DiagnosisModule } from './diagnosis/diagnosis.module';
-import { VarietyModule } from './variety/variety.module';
-import { PrologService } from './prolog/prolog.service';
-import { PrologController } from './prolog/prolog.controller';
+import { PrologModule } from './prolog/prolog.module';
+import { DiseasesModule } from './diseases/diseases.module';
+import { AdvicesModule } from './advices/advices.module';
+import { FertilizerModule } from './fertilizer/fertilizer.module';
+import { HarvestModule } from './harvest/harvest.module';
+import { NutritionModule } from './nutrition/nutrition.module';
 
 @Module({
-  imports: [DiagnosisModule, VarietyModule],
-  controllers: [AppController, PrologController],
-  providers: [AppService, PrologService],
+  imports: [
+    PrologModule,
+    DiseasesModule,
+    AdvicesModule,
+    FertilizerModule,
+    HarvestModule,
+    NutritionModule,
+  ],
 })
-export class AppModule {}
+export class AppModule { }
