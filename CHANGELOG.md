@@ -270,3 +270,64 @@ http://localhost:3000/nutrition
 }
 ]
 }
+
+http://localhost:3000/variety/recommend
+
+{
+"result": [
+{
+"id": "yellow_passion_fruit",
+"name": "yellow passion fruit",
+"confidence": 0.7
+}
+]
+}
+
+http://localhost:3000/fertilizer/recommend
+
+{
+"zone": "wet_zone",
+"stage": "planting",
+"recommendations": [
+{
+"fertilizer": "urea",
+"amount": 500
+},
+{
+"fertilizer": "triple_super_phosphate",
+"amount": 5000
+},
+{
+"fertilizer": "muriate_of_potash",
+"amount": 10000
+},
+{
+"fertilizer": "urea",
+"amount": 500
+},
+{
+"fertilizer": "triple_super_phosphate",
+"amount": 5000
+},
+{
+"fertilizer": "muriate_of_potash",
+"amount": 10000
+}
+]
+}
+
+http://localhost:3000/harvest/check
+
+{
+"variety": "yellow_passion_fruit",
+"daysSinceFlowering": 5,
+"status": "not_ready"
+}
+
+http://localhost:3000/harvest/yield
+
+{
+"variety": "yellow_passion_fruit",
+"plantAge": 14,
+"predictedYield": "5000 kg/hectare"
+}
