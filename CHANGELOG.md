@@ -109,3 +109,225 @@ http://localhost:3000/harvest/check
 "not_ready"
 ]
 }
+
+Structured JSON
+
+http://localhost:3000/advices?disease=fusarium_wilt
+
+{
+"disease": "fusarium_wilt",
+"advices": [
+"Improve soil drainage",
+"Rotate crops",
+"Apply carbendazim"
+]
+}
+
+http://localhost:3000/diseases/diagnose?symptoms=wilting_stem,yellow_leaves
+
+{
+"diagnoses": [
+{
+"disease": "fusarium_wilt",
+"confidence": 0.9
+},
+{
+"disease": "fusarium_wilt",
+"confidence": 0.8
+},
+{
+"disease": "vine_mite",
+"confidence": 0.8
+},
+{
+"disease": "waterlogging",
+"confidence": 0.8
+}
+]
+}
+
+http://localhost:3000/fertilizer/
+
+{
+"fertilizers": [
+{
+"id": 0,
+"stage": "planting",
+"fertilizer": "urea",
+"amount": 500
+},
+{
+"id": 0,
+"stage": "planting",
+"fertilizer": "triple_super_phosphate",
+"amount": 5000
+},
+{
+"id": 0,
+"stage": "planting",
+"fertilizer": "muriate_of_potash",
+"amount": 10000
+},
+{
+"id": 0.5,
+"stage": "2_weeks_after_planting",
+"fertilizer": "urea",
+"amount": 45
+},
+{
+"id": 0.5,
+"stage": "2_weeks_after_planting",
+"fertilizer": "triple_super_phosphate",
+"amount": 80
+},
+{
+"id": 0.5,
+"stage": "2_weeks_after_planting",
+"fertilizer": "muriate_of_potash",
+"amount": 40
+},
+{
+"id": 0.5,
+"stage": "2_weeks_after_planting",
+"fertilizer": "magnesium_sulphate",
+"amount": 55
+}
+]
+}
+
+http://localhost:3000/harvest?crop=purple_passion_fruit
+
+{
+"crop": "purple_passion_fruit",
+"harvest_times": [
+"90"
+]
+}
+
+http://localhost:3000/nutrition
+
+{
+"nutrition": [
+{
+"type": "water",
+"value": 89,
+"unit": "percent"
+},
+{
+"type": "energy",
+"value": 37,
+"unit": "kcal"
+},
+{
+"type": "protein",
+"value": 1.2,
+"unit": "percent"
+},
+{
+"type": "fat",
+"value": 0.2,
+"unit": "percent"
+},
+{
+"type": "carbohydrate",
+"value": 7.7,
+"unit": "percent"
+},
+{
+"type": "fiber",
+"value": 10,
+"unit": "mg"
+},
+{
+"type": "calcium",
+"value": 30,
+"unit": "mg"
+},
+{
+"type": "iron",
+"value": 0.7,
+"unit": "mg"
+},
+{
+"type": "vitamin_a",
+"value": 1968,
+"unit": "IU"
+},
+{
+"type": "vitamin_b",
+"value": 10,
+"unit": "mg"
+},
+{
+"type": "vitamin_c",
+"value": 20,
+"unit": "mg"
+},
+{
+"type": "potassium",
+"value": 13,
+"unit": "mg"
+}
+]
+}
+
+http://localhost:3000/variety/recommend
+
+{
+"result": [
+{
+"id": "yellow_passion_fruit",
+"name": "yellow passion fruit",
+"confidence": 0.7
+}
+]
+}
+
+http://localhost:3000/fertilizer/recommend
+
+{
+"zone": "wet_zone",
+"stage": "planting",
+"recommendations": [
+{
+"fertilizer": "urea",
+"amount": 500
+},
+{
+"fertilizer": "triple_super_phosphate",
+"amount": 5000
+},
+{
+"fertilizer": "muriate_of_potash",
+"amount": 10000
+},
+{
+"fertilizer": "urea",
+"amount": 500
+},
+{
+"fertilizer": "triple_super_phosphate",
+"amount": 5000
+},
+{
+"fertilizer": "muriate_of_potash",
+"amount": 10000
+}
+]
+}
+
+http://localhost:3000/harvest/check
+
+{
+"variety": "yellow_passion_fruit",
+"daysSinceFlowering": 5,
+"status": "not_ready"
+}
+
+http://localhost:3000/harvest/yield
+
+{
+"variety": "yellow_passion_fruit",
+"plantAge": 14,
+"predictedYield": "5000 kg/hectare"
+}
