@@ -145,3 +145,52 @@ http://localhost:3000/diseases/diagnose?symptoms=wilting_stem,yellow_leaves
 }
 ]
 }
+
+http://localhost:3000/fertilizer/
+
+{
+"fertilizers": [
+{
+"id": 0,
+"stage": "planting",
+"fertilizer": "urea",
+"amount": 500
+},
+{
+"id": 0,
+"stage": "planting",
+"fertilizer": "triple_super_phosphate",
+"amount": 5000
+},
+{
+"id": 0,
+"stage": "planting",
+"fertilizer": "muriate_of_potash",
+"amount": 10000
+},
+{
+"id": 0.5,
+"stage": "2_weeks_after_planting",
+"fertilizer": "urea",
+"amount": 45
+},
+{
+"id": 0.5,
+"stage": "2_weeks_after_planting",
+"fertilizer": "triple_super_phosphate",
+"amount": 80
+},
+{
+"id": 0.5,
+"stage": "2_weeks_after_planting",
+"fertilizer": "muriate_of_potash",
+"amount": 40
+},
+{
+"id": 0.5,
+"stage": "2_weeks_after_planting",
+"fertilizer": "magnesium_sulphate",
+"amount": 55
+}
+]
+}
