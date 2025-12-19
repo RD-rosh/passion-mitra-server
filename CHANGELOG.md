@@ -122,3 +122,26 @@ http://localhost:3000/advices?disease=fusarium_wilt
 "Apply carbendazim"
 ]
 }
+
+http://localhost:3000/diseases/diagnose?symptoms=wilting_stem,yellow_leaves
+
+{
+"diagnoses": [
+{
+"disease": "fusarium_wilt",
+"confidence": 0.9
+},
+{
+"disease": "fusarium_wilt",
+"confidence": 0.8
+},
+{
+"disease": "vine_mite",
+"confidence": 0.8
+},
+{
+"disease": "waterlogging",
+"confidence": 0.8
+}
+]
+}
