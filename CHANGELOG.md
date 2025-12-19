@@ -194,3 +194,12 @@ http://localhost:3000/fertilizer/
 }
 ]
 }
+
+http://localhost:3000/harvest?crop=purple_passion_fruit
+
+{
+"crop": "purple_passion_fruit",
+"harvest_times": [
+"90"
+]
+}
