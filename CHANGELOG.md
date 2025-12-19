@@ -109,3 +109,16 @@ http://localhost:3000/harvest/check
 "not_ready"
 ]
 }
+
+Structured JSON
+
+http://localhost:3000/advices?disease=fusarium_wilt
+
+{
+"disease": "fusarium_wilt",
+"advices": [
+"Improve soil drainage",
+"Rotate crops",
+"Apply carbendazim"
+]
+}
