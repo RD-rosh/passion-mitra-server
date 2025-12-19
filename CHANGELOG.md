@@ -203,3 +203,70 @@ http://localhost:3000/harvest?crop=purple_passion_fruit
 "90"
 ]
 }
+
+http://localhost:3000/nutrition
+
+{
+"nutrition": [
+{
+"type": "water",
+"value": 89,
+"unit": "percent"
+},
+{
+"type": "energy",
+"value": 37,
+"unit": "kcal"
+},
+{
+"type": "protein",
+"value": 1.2,
+"unit": "percent"
+},
+{
+"type": "fat",
+"value": 0.2,
+"unit": "percent"
+},
+{
+"type": "carbohydrate",
+"value": 7.7,
+"unit": "percent"
+},
+{
+"type": "fiber",
+"value": 10,
+"unit": "mg"
+},
+{
+"type": "calcium",
+"value": 30,
+"unit": "mg"
+},
+{
+"type": "iron",
+"value": 0.7,
+"unit": "mg"
+},
+{
+"type": "vitamin_a",
+"value": 1968,
+"unit": "IU"
+},
+{
+"type": "vitamin_b",
+"value": 10,
+"unit": "mg"
+},
+{
+"type": "vitamin_c",
+"value": 20,
+"unit": "mg"
+},
+{
+"type": "potassium",
+"value": 13,
+"unit": "mg"
+}
+]
+}
